@@ -32,7 +32,7 @@ def task_1_7(arr_a: list[int], arr_b: list[int]) -> list[int]:
 def task_2_7(arr_a: list[int], arr_b: list[int]) -> list[int]:
     """Элементы, присутствующие в обоих массивах A и B."""
     return sorted(set(arr_a) & set(arr_b))
-
+    
 
 def main() -> None:
     print("Программа по вариантам 1.7, 2.7, 3.7\n")
