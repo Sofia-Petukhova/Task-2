@@ -32,6 +32,14 @@ def task_1_7(arr_a: list[int], arr_b: list[int]) -> list[int]:
 def task_2_7(arr_a: list[int], arr_b: list[int]) -> list[int]:
     """Элементы, присутствующие в обоих массивах A и B."""
     return sorted(set(arr_a) & set(arr_b))
+
+
+def task_3_7(arr_a: list[int], arr_b: list[int]) -> list[int]:
+    """Элементы, которые присутствуют в нескольких экземплярах в A или B."""
+    ca = Counter(arr_a)
+    cb = Counter(arr_b)
+    return sorted({x for x, c in ca.items() if c > 1} |
+                  {x for x, c in cb.items() if c > 1})
     
 
 def main() -> None:
